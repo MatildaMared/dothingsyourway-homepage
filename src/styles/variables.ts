@@ -8,11 +8,15 @@ const Variables = createGlobalStyle`
         --color-secondary-dark: hsla(15, 60%, 50%, 1.0);
         --color-secondary: hsla(18, 85%, 60%, 1.0);
 
-        --color-background: #EEE;
+        --color-white: #EEE;
         --color-black: hsla(189, 10%, 15%, 1.0);
 
         // Sizes
         --max-width: 1200px;
+
+        // Fonts
+        --font-primary: apparat-light, sans-serif;
+        --font-secondary: futura-pt-condensed, sans-serif;
     }
 `;
 
