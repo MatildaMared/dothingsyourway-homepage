@@ -10,7 +10,6 @@ function Container({ children }: Props) {
 }
 
 const ContentWrapper = styled.div`
-	background-color: var(--color-background);
 	max-width: var(--max-width);
 	margin: 0 auto;
 	padding: 1rem;

@@ -1,10 +1,11 @@
 import React from "react";
-import Container from "./components/layout/Container";
+import Footer from "./components/Footer";
+import Container from "./components/Layout/Container";
 import Logo from "./components/Logo";
 
 function App() {
 	return (
-		<div className="App">
+		<>
 			<Logo />
 			<h1>Hello World</h1>
 			<Container>
@@ -48,7 +49,8 @@ function App() {
 				let in i show my fluffy belly but it's a trap! if you pet it i will tear
 				up your hand plop down in the middle where everybody walks.
 			</Container>
-		</div>
+			<Footer />
+		</>
 	);
 }
 

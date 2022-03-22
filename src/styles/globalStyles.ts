@@ -5,10 +5,12 @@ const GlobalStyle = createGlobalStyle`
     background: var(--color-background);
     font-family: apparat-light, sans-serif;
     color: var(--color-black);
+    font-size: 18px;
   }
 
-    h2, h3, h4, h5, h6 {
-        font-family: apparat, sans-serif;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: futura-pt-condensed, sans-serif;
+        text-transform: uppercase;
     }
 `;
 
