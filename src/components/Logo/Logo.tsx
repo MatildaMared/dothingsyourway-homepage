@@ -17,7 +17,7 @@ const Text = styled.h1`
 	font-size: ${({ size }: Props) => {
 		switch (size) {
 			case "small":
-				return "1.5rem";
+				return "1.8rem";
 			case "medium":
 				return "2.5rem";
 			case "large":
