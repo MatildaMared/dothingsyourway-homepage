@@ -28,7 +28,7 @@ function Footer() {
 const Wrapper = styled.footer`
 	background-color: var(--color-primary-dark);
 	color: var(--color-white);
-	padding: 1rem 0;
+	padding: 3rem 0;
 	font-size: 1rem;
 `;
 
