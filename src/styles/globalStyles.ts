@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--font-primary);
     color: var(--color-black);
     font-size: 18px;
+    line-height: 1.6;
   }
 
     h1, h2, h3, h4, h5, h6 {
