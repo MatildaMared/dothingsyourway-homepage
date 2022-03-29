@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "./components/Footer";
 import Container from "./components/Layout/Container";
 import Logo from "./components/Logo";
+import Testimonials from "./components/Testimonials";
 
 function App() {
 	return (
@@ -49,6 +50,7 @@ function App() {
 				let in i show my fluffy belly but it's a trap! if you pet it i will tear
 				up your hand plop down in the middle where everybody walks.
 			</Container>
+			<Testimonials />
 			<Footer />
 		</>
 	);
