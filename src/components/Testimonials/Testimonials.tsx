@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import testimonialsData from "../../data/testimonials";
-import { User } from "react-feather";
+import Testimonial from "../../models/testimonial";
+import TestimonialCard from "./TestimonialCard";
 
 function Testimonials() {
-	const [testimonials, setTestimonials] = useState(testimonialsData);
-	const [currentCenterIndex, setCurrentCenterIndex] = useState<Number>(2);
+	const [testimonials, setTestimonials] =
+		useState<Testimonial[]>(testimonialsData);
+	const [currentCenterIndex, setCurrentCenterIndex] = useState<number>(2);
 
 	function displayNext() {
 		console.log("Display next image!");
@@ -18,18 +20,14 @@ function Testimonials() {
 		<section>
 			<h1>Testimonials</h1>
 			<List>
-				{testimonials.map((testimonial, index) => (
-					<Item
-						key={testimonial.id}
-						className={index === currentCenterIndex ? "active" : ""}
-					>
-						<UserImageWrapper>
-							<User size={36} color="#DDDDDD" />
-						</UserImageWrapper>
-						<h2>{testimonial.name}</h2>
-						<p>{testimonial.text}</p>
-					</Item>
-				))}
+				<TestimonialCard testimonial={testimonials[currentCenterIndex - 2]} />
+				<TestimonialCard testimonial={testimonials[currentCenterIndex - 1]} />
+				<TestimonialCard
+					testimonial={testimonials[currentCenterIndex]}
+					isActive
+				/>
+				<TestimonialCard testimonial={testimonials[currentCenterIndex + 1]} />
+				<TestimonialCard testimonial={testimonials[currentCenterIndex + 2]} />
 			</List>
 			<button onClick={displayPrevious}>Previous</button>
 			<button onClick={displayNext}>Next</button>
@@ -44,29 +42,6 @@ const List = styled.ul`
 	grid-gap: 1rem;
 	border: 1px solid gray;
 	padding: 1rem;
-`;
-
-const Item = styled.li`
-	border: 1px solid pink;
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	&.active {
-		border: 1px solid purple;
-	}
-`;
-
-const UserImageWrapper = styled.div`
-	background-color: #b6b6b6;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 `;
 
 export default Testimonials;
