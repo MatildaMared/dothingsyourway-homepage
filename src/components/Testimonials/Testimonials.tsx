@@ -6,6 +6,14 @@ import { User } from "react-feather";
 function Testimonials() {
 	const [testimonials, setTestimonials] = useState(testimonialsData);
 	const [currentCenterIndex, setCurrentCenterIndex] = useState<Number>(2);
+
+	function displayNext() {
+		console.log("Display next image!");
+	}
+
+	function displayPrevious() {
+		console.log("Display previous image!");
+	}
 	return (
 		<section>
 			<h1>Testimonials</h1>
@@ -23,8 +31,8 @@ function Testimonials() {
 					</Item>
 				))}
 			</List>
-			<button>Previous</button>
-			<button>Next</button>
+			<button onClick={displayPrevious}>Previous</button>
+			<button onClick={displayNext}>Next</button>
 		</section>
 	);
 }
@@ -59,6 +67,6 @@ const UserImageWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-`
+`;
 
 export default Testimonials;
