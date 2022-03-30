@@ -31,7 +31,9 @@ function Testimonials() {
 
 const List = styled.ul`
 	list-style: none;
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 1rem;
 	border: 1px solid gray;
 	padding: 1rem;
 `;
