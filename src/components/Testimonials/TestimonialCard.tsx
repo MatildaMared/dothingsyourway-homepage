@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Testimonial from "../../models/testimonial";
 import { User } from "react-feather";
-import testimonials from "../../data/testimonials";
 
 interface Props {
 	testimonial: Testimonial;

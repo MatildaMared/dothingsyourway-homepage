@@ -17,31 +17,35 @@ function Testimonials() {
 		console.log("Display previous image!");
 	}
 	return (
-		<section>
-			<h1>Testimonials</h1>
+		<Wrapper>
+			<button onClick={displayPrevious}>Previous</button>
 			<List>
-				<TestimonialCard testimonial={testimonials[currentCenterIndex - 2]} />
 				<TestimonialCard testimonial={testimonials[currentCenterIndex - 1]} />
 				<TestimonialCard
 					testimonial={testimonials[currentCenterIndex]}
 					isActive
 				/>
 				<TestimonialCard testimonial={testimonials[currentCenterIndex + 1]} />
-				<TestimonialCard testimonial={testimonials[currentCenterIndex + 2]} />
 			</List>
-			<button onClick={displayPrevious}>Previous</button>
 			<button onClick={displayNext}>Next</button>
-		</section>
+		</Wrapper>
 	);
 }
 
+const Wrapper = styled.section`
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+`;
+
 const List = styled.ul`
+	margin: 0 auto;
 	list-style: none;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 1rem;
 	border: 1px solid gray;
 	padding: 1rem;
+	max-width: var(--max-width);
 `;
 
 export default Testimonials;
