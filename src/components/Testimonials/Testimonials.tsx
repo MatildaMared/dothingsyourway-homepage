@@ -24,7 +24,7 @@ function Testimonials() {
 	}
 	return (
 		<Wrapper>
-			<Button onClick={displayPrevious}>
+			<Button onClick={displayPrevious} disabled={testimonials.length <= 3}>
 				<ChevronLeft size={24} color="#DDD" />
 			</Button>
 			<List>
@@ -32,7 +32,7 @@ function Testimonials() {
 					<TestimonialCard key={index} testimonial={testimonial} />
 				))}
 			</List>
-			<Button onClick={displayNext}>
+			<Button onClick={displayNext} disabled={testimonials.length <= 3}>
 				<ChevronRight size={24} color="#DDD" />
 			</Button>
 		</Wrapper>
@@ -74,6 +74,11 @@ const Button = styled.button`
 
 	&:hover {
 		background-color: #8d8d8d;
+	}
+
+	&:disabled {
+		background-color: #b4b4b4;
+		cursor: not-allowed;
 	}
 `;
 
