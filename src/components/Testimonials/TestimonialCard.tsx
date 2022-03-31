@@ -27,9 +27,12 @@ const Item = styled.li`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	display: none;
 
-	&.active {
-		border: 1px solid purple;
+	&:nth-child(1),
+	&:nth-child(2),
+	&:nth-child(3) {
+		display: flex;
 	}
 `;
 
