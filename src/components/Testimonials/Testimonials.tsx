@@ -2,30 +2,32 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import testimonialsData from "../../data/testimonials";
 import Testimonial from "../../models/testimonial";
+import {
+	shiftArrayBackward,
+	shiftArrayForward,
+} from "../../utils/arrayMethods";
 import TestimonialCard from "./TestimonialCard";
 
 function Testimonials() {
 	const [testimonials, setTestimonials] =
 		useState<Testimonial[]>(testimonialsData);
-	const [currentCenterIndex, setCurrentCenterIndex] = useState<number>(2);
 
 	function displayNext() {
 		console.log("Display next image!");
+		setTestimonials(shiftArrayForward([...testimonials]));
 	}
 
 	function displayPrevious() {
 		console.log("Display previous image!");
+		setTestimonials(shiftArrayBackward([...testimonials]));
 	}
 	return (
 		<Wrapper>
 			<button onClick={displayPrevious}>Previous</button>
 			<List>
-				<TestimonialCard testimonial={testimonials[currentCenterIndex - 1]} />
-				<TestimonialCard
-					testimonial={testimonials[currentCenterIndex]}
-					isActive
-				/>
-				<TestimonialCard testimonial={testimonials[currentCenterIndex + 1]} />
+				{testimonials.map((testimonial, index) => (
+					<TestimonialCard key={index} testimonial={testimonial} />
+				))}
 			</List>
 			<button onClick={displayNext}>Next</button>
 		</Wrapper>
