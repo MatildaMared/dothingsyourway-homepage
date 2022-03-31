@@ -7,6 +7,7 @@ import {
 	shiftArrayForward,
 } from "../../utils/arrayMethods";
 import TestimonialCard from "./TestimonialCard";
+import { ChevronRight, ChevronLeft } from "react-feather";
 
 function Testimonials() {
 	const [testimonials, setTestimonials] =
@@ -23,23 +24,32 @@ function Testimonials() {
 	}
 	return (
 		<Wrapper>
-			<button onClick={displayPrevious}>Previous</button>
+			<Button onClick={displayPrevious}>
+				<ChevronLeft size={24} color="#DDD" />
+			</Button>
 			<List>
 				{testimonials.map((testimonial, index) => (
 					<TestimonialCard key={index} testimonial={testimonial} />
 				))}
 			</List>
-			<button onClick={displayNext}>Next</button>
+			<Button onClick={displayNext}>
+				<ChevronRight size={24} color="#DDD" />
+			</Button>
 		</Wrapper>
 	);
 }
 
 const Wrapper = styled.section`
 	display: grid;
-	grid-template-columns: 1fr auto 1fr;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	justify-items: center;
+	max-width: var(--max-width-extra);
+	margin: 0 auto;
 `;
 
 const List = styled.ul`
+	width: 100%;
 	margin: 0 auto;
 	list-style: none;
 	display: grid;
@@ -47,7 +57,24 @@ const List = styled.ul`
 	grid-gap: 1rem;
 	border: 1px solid gray;
 	padding: 1rem;
-	max-width: var(--max-width);
+`;
+
+const Button = styled.button`
+	margin: 1rem;
+	width: 40px;
+	height: 40px;
+	background-color: #b4b4b4;
+	border: none;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+
+	&:hover {
+		background-color: #8d8d8d;
+	}
 `;
 
 export default Testimonials;
