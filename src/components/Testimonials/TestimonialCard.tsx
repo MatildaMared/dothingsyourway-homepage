@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Testimonial from "../../models/testimonial";
 import { User } from "react-feather";
+import { userInfo } from "os";
 
 interface Props {
 	testimonial: Testimonial;
@@ -11,9 +12,13 @@ interface Props {
 function TestimonialCard({ testimonial, isActive }: Props) {
 	return (
 		<Item className={isActive ? "active" : ""}>
-			<UserImageWrapper>
-				<User size="32" color="#DDD" />
-			</UserImageWrapper>
+			<UserPhotoWrapper>
+				{testimonial.image ? (
+					<UserPhoto src={testimonial.image} alt={testimonial.name} />
+				) : (
+					<User size="32" color="#DDD" />
+				)}
+			</UserPhotoWrapper>
 			<h2>{testimonial.name}</h2>
 			<p>{testimonial.text}</p>
 		</Item>
@@ -25,7 +30,7 @@ const Item = styled.li`
 	padding: 1rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	display: none;
 
@@ -36,14 +41,21 @@ const Item = styled.li`
 	}
 `;
 
-const UserImageWrapper = styled.div`
+const UserPhotoWrapper = styled.div`
 	background-color: #b6b6b6;
-	width: 50px;
-	height: 50px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
+`;
+
+const UserPhoto = styled.img`
+	width: 100%;
+	height: auto;
+	place-content: center;
 `;
 
 export default TestimonialCard;
