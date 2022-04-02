@@ -24,22 +24,31 @@ function Testimonials() {
 	}
 	return (
 		<Wrapper>
-			<Button onClick={displayPrevious} disabled={testimonials.length <= 3}>
-				<ChevronLeft size={24} color="#DDD" />
-			</Button>
-			<List>
-				{testimonials.map((testimonial, index) => (
-					<TestimonialCard key={index} testimonial={testimonial} />
-				))}
-			</List>
-			<Button onClick={displayNext} disabled={testimonials.length <= 3}>
-				<ChevronRight size={24} color="#DDD" />
-			</Button>
+			<Content>
+				<Button onClick={displayPrevious} disabled={testimonials.length <= 3}>
+					<ChevronLeft size={24} color="#DDD" />
+				</Button>
+				<List>
+					{testimonials.map((testimonial, index) => (
+						<TestimonialCard key={index} testimonial={testimonial} />
+					))}
+				</List>
+				<Button onClick={displayNext} disabled={testimonials.length <= 3}>
+					<ChevronRight size={24} color="#DDD" />
+				</Button>
+			</Content>
 		</Wrapper>
 	);
 }
 
 const Wrapper = styled.section`
+	width: 100%;
+	margin: 0 auto;
+	background-color: var(--color-primary-dark);
+	margin: var(--spacing-xl) 0;
+`;
+
+const Content = styled.div`
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 	align-items: center;
@@ -54,16 +63,16 @@ const List = styled.ul`
 	list-style: none;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 1rem;
+	grid-gap: 3rem;
 	border: 1px solid gray;
-	padding: 1rem;
+	padding: 3rem;
 `;
 
 const Button = styled.button`
 	margin: 1rem;
 	width: 40px;
 	height: 40px;
-	background-color: #b4b4b4;
+	background-color: var(--color-primary);
 	border: none;
 	border-radius: 50%;
 	display: flex;
@@ -77,7 +86,7 @@ const Button = styled.button`
 	}
 
 	&:disabled {
-		background-color: #b4b4b4;
+		opacity: 0.5;
 		cursor: not-allowed;
 	}
 `;

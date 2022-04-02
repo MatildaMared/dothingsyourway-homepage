@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Testimonial from "../../models/testimonial";
 import { User } from "react-feather";
-import { userInfo } from "os";
 
 interface Props {
 	testimonial: Testimonial;
@@ -33,6 +32,7 @@ const Item = styled.li`
 	justify-content: flex-start;
 	align-items: center;
 	display: none;
+	background-color: var(--color-white);
 
 	&:nth-child(1),
 	&:nth-child(2),
