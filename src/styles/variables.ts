@@ -13,7 +13,7 @@ const Variables = createGlobalStyle`
 
         // Sizes
         --max-width: 1200px;
-        --max-width: 1400px;
+        --max-width-extra: 1600px;
 
         // Fonts
         --font-primary: apparat-light, sans-serif;
