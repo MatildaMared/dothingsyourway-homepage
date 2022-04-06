@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 400;
     }
 
+    h2 {
+        font-size: var(--font-md);
+    }
+
     a {
         color: var(--color-primary-dark);
         text-decoration: none;
