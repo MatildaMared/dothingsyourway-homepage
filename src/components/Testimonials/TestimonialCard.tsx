@@ -25,19 +25,18 @@ function TestimonialCard({ testimonial, isActive }: Props) {
 }
 
 const Item = styled.li`
-	border: 1px solid pink;
-	padding: 1rem;
+	padding: 2rem;
+	border-radius: 1rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	display: none;
 	background-color: var(--color-white);
+	line-height: 1.4;
 
-	&:nth-child(1),
-	&:nth-child(2),
-	&:nth-child(3) {
-		display: flex;
+	& h2 {
+		margin-bottom: 1rem;
 	}
 `;
 
@@ -50,6 +49,7 @@ const UserPhotoWrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	margin-bottom: .5rem;
 `;
 
 const UserPhoto = styled.img`
