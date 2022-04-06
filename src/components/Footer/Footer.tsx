@@ -35,11 +35,19 @@ const Wrapper = styled.footer`
 const ContactWrapper = styled.section`
 	display: flex;
 	justify-content: space-between;
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+
+		& > *:first-child {
+			margin-bottom: 2rem;
+		}
+	}
 `;
 
 const LogoContainer = styled.div`
 	margin-bottom: 1rem;
-	padding-bottom: .5rem;
+	padding-bottom: 0.5rem;
 	border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
 	color: var(--color-white);
 `;
@@ -56,6 +64,10 @@ const Copyright = styled.div`
 
 	& a {
 		color: var(--color-primary);
+	}
+
+	@media (max-width: 600px) {
+		flex-direction: column;
 	}
 `;
 

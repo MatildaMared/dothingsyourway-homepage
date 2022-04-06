@@ -4,8 +4,8 @@ import { Phone, MapPin, Package } from "react-feather";
 
 function Contact() {
 	return (
-		<Wrapper>
-			<h2>Markus Mattsson</h2>
+		<section>
+			<h3>Markus Mattsson</h3>
 			<Details>
 				<MapPin size={18} strokeWidth={1} />
 				<span>Kaptensgatan 10E, 30245, Halmstad</span>
@@ -18,11 +18,9 @@ function Contact() {
 				<Package size={18} strokeWidth={1} />
 				<span>Org.nr: SE900306053101</span>
 			</Details>
-		</Wrapper>
+		</section>
 	);
 }
-
-const Wrapper = styled.section``;
 
 const Details = styled.p`
 	display: flex;

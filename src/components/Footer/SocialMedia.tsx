@@ -5,7 +5,7 @@ import { Instagram, Facebook, AtSign } from "react-feather";
 function SocialMedia() {
 	return (
 		<Wrapper>
-			<h2>Sociala medier</h2>
+			<h3>Sociala medier</h3>
 			<List>
 				<Item>
 					<a href="mailto:markus@dothingsyourway.com">
