@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     background: var(--color-white);
     font-family: var(--font-primary);
     color: var(--color-black);
-    font-size: 18px;
+    font-size: var(--font-base);
     line-height: 1.6;
   }
 

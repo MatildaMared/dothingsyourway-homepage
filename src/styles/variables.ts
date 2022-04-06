@@ -15,12 +15,12 @@ const Variables = createGlobalStyle`
         --max-width: 1200px;
         --max-width-extra: 1600px;
 
-        --font-sm: clamp(0.7rem, 0.08vw + 0.68rem, 0.75rem);
-        --font-base: clamp(0.88rem, 0.4vw + 0.78rem, 1.13rem);
-        --font-md: clamp(1.09rem, 0.95vw + 0.86rem, 1.69rem);
-        --font-lg: clamp(1.37rem, 1.86vw + 0.9rem, 2.53rem);
-        --font-xl: clamp(1.71rem, 3.34vw + 0.87rem, 3.8rem);
-        --font-xxl: clamp(2.14rem, 5.69vw + 0.71rem, 5.7rem);
+        --font-sm: clamp(0.7rem, 0.21vw + 0.65rem, 0.83rem);
+        --font-base: clamp(0.88rem, 0.6vw + 0.72rem, 1.25rem);
+        --font-md: clamp(1.09rem, 1.25vw + 0.78rem, 1.88rem);
+        --font-lg: clamp(1.37rem, 2.31vw + 0.79rem, 2.81rem);
+        --font-xl: clamp(1.71rem, 4.02vw + 0.71rem, 4.22rem);
+        --font-xxl: clamp(2.14rem, 6.71vw + 0.46rem, 6.33rem);
 
         // Fonts
         --font-primary: apparat-light, sans-serif;
