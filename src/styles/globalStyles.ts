@@ -17,6 +17,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h2 {
+        font-size: var(--font-lg);
+    }
+
+    h3 {
         font-size: var(--font-md);
     }
 

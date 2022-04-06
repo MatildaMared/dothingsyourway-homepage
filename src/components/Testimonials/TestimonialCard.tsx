@@ -18,7 +18,7 @@ function TestimonialCard({ testimonial, isActive }: Props) {
 					<User size="32" color="#DDD" />
 				)}
 			</UserPhotoWrapper>
-			<h2>{testimonial.name}</h2>
+			<h3>{testimonial.name}</h3>
 			<p>{testimonial.text}</p>
 		</Item>
 	);
@@ -35,7 +35,7 @@ const Item = styled.li`
 	background-color: var(--color-white);
 	line-height: 1.4;
 
-	& h2 {
+	& h3 {
 		margin-bottom: 1rem;
 	}
 `;
@@ -49,7 +49,7 @@ const UserPhotoWrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 `;
 
 const UserPhoto = styled.img`

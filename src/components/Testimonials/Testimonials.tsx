@@ -24,6 +24,7 @@ function Testimonials() {
 	}
 	return (
 		<Wrapper>
+			<Heading>Detta säger mina kunder</Heading>
 			<Content>
 				<Button
 					onClick={displayPrevious}
@@ -52,6 +53,13 @@ const Wrapper = styled.section`
 	margin: 0 auto;
 	background-color: var(--color-primary-dark);
 	margin: var(--spacing-xl) 0;
+	padding: var(--spacing-large) 0;
+`;
+
+const Heading = styled.h2`
+	color: var(--color-white);
+	text-align: center;
+	margin-bottom: 2rem;
 `;
 
 const Content = styled.div`
@@ -81,9 +89,8 @@ const List = styled.ul<ListProps>`
 			return "repeat(1, 1fr)";
 		}
 	}};
-	grid-gap: 3rem;
-	border: 1px solid gray;
-	padding: 3rem;
+	grid-gap: 4rem;
+	padding: 0 1rem;
 
 	& > * {
 		&:nth-child(3) {
