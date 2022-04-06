@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import testimonialsData from "../../data/testimonials";
 import Testimonial from "../../models/testimonial";
@@ -8,32 +8,38 @@ import {
 } from "../../utils/arrayMethods";
 import TestimonialCard from "./TestimonialCard";
 import { ChevronRight, ChevronLeft } from "react-feather";
+import useWidth from "../../hooks/useWidth";
 
 function Testimonials() {
 	const [testimonials, setTestimonials] =
 		useState<Testimonial[]>(testimonialsData);
+	const windowWidth = useWidth();
 
 	function displayNext() {
-		console.log("Display next image!");
 		setTestimonials(shiftArrayForward([...testimonials]));
 	}
 
 	function displayPrevious() {
-		console.log("Display previous image!");
 		setTestimonials(shiftArrayBackward([...testimonials]));
 	}
 	return (
 		<Wrapper>
 			<Content>
-				<Button onClick={displayPrevious} disabled={testimonials.length <= 3}>
+				<Button
+					onClick={displayPrevious}
+					disabled={testimonials.length <= 3 && windowWidth! > 1400}
+				>
 					<ChevronLeft size={24} color="#DDD" />
 				</Button>
-				<List>
+				<List width={windowWidth}>
 					{testimonials.map((testimonial, index) => (
 						<TestimonialCard key={index} testimonial={testimonial} />
 					))}
 				</List>
-				<Button onClick={displayNext} disabled={testimonials.length <= 3}>
+				<Button
+					onClick={displayNext}
+					disabled={testimonials.length <= 3 && windowWidth! > 1400}
+				>
 					<ChevronRight size={24} color="#DDD" />
 				</Button>
 			</Content>
@@ -57,15 +63,36 @@ const Content = styled.div`
 	margin: 0 auto;
 `;
 
-const List = styled.ul`
+interface ListProps {
+	readonly width: number;
+}
+
+const List = styled.ul<ListProps>`
 	width: 100%;
 	margin: 0 auto;
 	list-style: none;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: ${(props) => {
+		if (props.width > 1400) {
+			return "repeat(3, 1fr)";
+		} else if (props.width > 1000) {
+			return "repeat(2, 1fr)";
+		} else {
+			return "repeat(1, 1fr)";
+		}
+	}};
 	grid-gap: 3rem;
 	border: 1px solid gray;
 	padding: 3rem;
+
+	& > * {
+		&:nth-child(3) {
+			display: ${(props) => (props.width > 1400 ? "flex" : "none")};
+		}
+		&:nth-child(2) {
+			display: ${(props) => (props.width > 1000 ? "flex" : "none")};
+		}
+	}
 `;
 
 const Button = styled.button`
