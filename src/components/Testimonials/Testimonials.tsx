@@ -86,11 +86,12 @@ const List = styled.ul<ListProps>`
 		} else if (props.width > 1000) {
 			return "repeat(2, 1fr)";
 		} else {
-			return "repeat(1, 1fr)";
+			return "minmax(300px, 500px)";
 		}
 	}};
 	grid-gap: 4rem;
 	padding: 0 1rem;
+	justify-content: center;
 
 	& > * {
 		&:nth-child(3) {
