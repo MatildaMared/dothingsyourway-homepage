@@ -3,11 +3,13 @@ import Footer from "./components/Footer";
 import Container from "./components/Layout/Container";
 import Logo from "./components/Logo";
 import Testimonials from "./components/Testimonials";
+import Header from "./components/Header";
 
 function App() {
 	return (
 		<>
 			<Logo />
+			<Header />
 			<h1>Hello World</h1>
 			<Container>
 				Cat ipsum dolor sit amet, kitty kitty ooooh feather moving feather!.

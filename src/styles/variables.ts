@@ -20,7 +20,7 @@ const Variables = createGlobalStyle`
         --font-md: clamp(1.09rem, 1.25vw + 0.78rem, 1.88rem);
         --font-lg: clamp(1.37rem, 2.31vw + 0.79rem, 2.81rem);
         --font-xl: clamp(1.71rem, 4.02vw + 0.71rem, 4.22rem);
-        --font-xxl: clamp(2.14rem, 6.71vw + 0.46rem, 6.33rem);
+        --font-xxl: clamp(3.14rem, 6.71vw + 0.46rem, 5.5rem);
 
         // Fonts
         --font-primary: apparat-light, sans-serif;
