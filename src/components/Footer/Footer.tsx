@@ -50,6 +50,11 @@ const LogoContainer = styled.div`
 	padding-bottom: 0.5rem;
 	border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
 	color: var(--color-white);
+	display: flex;
+
+	@media (max-width: 600px) {
+		justify-content: center;
+	}
 `;
 
 const Copyright = styled.div`
