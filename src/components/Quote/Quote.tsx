@@ -15,10 +15,16 @@ function Quote({ children, author }: Props) {
 }
 
 const BlockQuote = styled.blockquote`
-    font-size: 1.8rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    max-width: 600px;
+    color: var(--color-primary-dark);
+    font-family: var(--font-primary);
+    font-size: var(--font-md);
     font-style: italic;
     text-align: center;
     font-weight: 800;
+    margin-block: var(--spacing-large);
 `;
 
 export default Quote;

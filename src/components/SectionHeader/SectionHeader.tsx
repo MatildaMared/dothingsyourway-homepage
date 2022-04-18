@@ -14,9 +14,9 @@ export default SectionHeader;
 const Wrapper = styled.h2`
     font-size: var(--font-xl);
     line-height: 1.8;
-    padding-block: 8rem;
+    padding-block: var(--spacing-large);
     background-color: var(--color-primary-dark);
-    margin-block-end: 2rem;
+    margin-block-end: var(--spacing-large);
     display: flex;
     justify-content: center;
     align-items: center;

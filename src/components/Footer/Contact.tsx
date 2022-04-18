@@ -25,6 +25,7 @@ function Contact() {
 const Details = styled.p`
 	display: flex;
 	align-items: center;
+	margin: 0;
 
 	& svg {
 		margin-right: 0.5rem;
