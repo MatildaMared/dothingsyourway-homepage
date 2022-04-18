@@ -25,13 +25,15 @@ const ButtonElem = styled.button<ButtonProps>`
     border-radius: 1rem;
     transition: all 0.2s;
     background-color: ${(props) =>
-        props.secondary ? "var(--color-secondary)" : "var(--color-primary)"};
+        props.secondary
+            ? "var(--color-secondary)"
+            : "var(--color-primary-dark)"};
 
     &:hover {
         background-color: ${(props) =>
             props.secondary
                 ? "var(--color-secondary-dark)"
-                : "var(--color-primary-dark)"};
+                : "var(--color-primary)"};
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         transform: translateY(-2px);
     }

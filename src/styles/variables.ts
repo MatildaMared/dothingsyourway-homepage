@@ -11,7 +11,8 @@ const Variables = createGlobalStyle`
         --color-secondary: hsla(18, 60%, 55%, 1.0);
         --color-secondary-light: hsla(18, 50%, 60%, .3);
 
-        --color-white: hsla(164, 12%, 90%, 1.0);
+        --color-white: hsla(164, 10%, 96%, 1.0);
+        --color-white-secondary: hsla(18, 60%, 96%, 1.0);
         --color-black: hsla(189, 10%, 15%, 1.0);
 
         // Sizes
@@ -35,6 +36,9 @@ const Variables = createGlobalStyle`
         --spacing-medium: 4rem;
         --spacing-large: 6rem;
         --spacing-xl: 12rem;
+
+        // Shadow
+        --shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
         
         @media (max-width: 700px) {
             --spacing-small: 1rem;
