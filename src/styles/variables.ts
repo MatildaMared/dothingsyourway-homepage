@@ -11,8 +11,8 @@ const Variables = createGlobalStyle`
         --color-secondary: hsla(18, 60%, 55%, 1.0);
         --color-secondary-light: hsla(18, 50%, 60%, .3);
 
-        --color-white: hsla(164, 10%, 96%, 1.0);
-        --color-white-secondary: hsla(18, 60%, 96%, 1.0);
+        --color-white: hsla(164, 15%, 96%, 1.0);
+        --color-white-secondary: hsla(18, 15%, 96%, 1.0);
         --color-black: hsla(189, 10%, 15%, 1.0);
 
         // Sizes
