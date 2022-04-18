@@ -77,43 +77,43 @@ function Offer() {
                     </tr>
                 </Table>
             </section>
-            <div>
-                <div>
-                    <div>
-                        <i className="icon bx bx-credit-card"></i>
+            <PaymentOptions>
+                <article>
+                    <h3>Betalningsalternativ 1</h3>
+                    <div className="icon">
+                        <i className="bx bx-credit-card"></i>
                     </div>
-                    <h3>Betalningsalternativ 1:</h3>
                     <p>Engångsbetalning 6000 kr</p>
                     <a
                         href="https://dothingsyourway.thrivecart.com/stressfrihet-intro/"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <Button secondary>Ja, jag vill investera i mig själv!</Button>
+                        <Button>Ja, jag vill investera i mig själv!</Button>
                     </a>
-                </div>
-                <div></div>
-                <div>
-                    <div>
-                        <i className="icon bx bx-credit-card"></i>
+                </article>
+                <article>
+                    <h3>Betalningsalternativ 2</h3>
+                    <div className="icon">
+                        <i className="bx bx-credit-card"></i>
                     </div>
-                    <h3>Betalningsalternativ 2:</h3>
                     <p>3 delbetalningar á 2200 kr (totalt 6600 kr)</p>
                     <a
                         href="https://dothingsyourway.thrivecart.com/stressfrihet-intro/"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <Button secondary>Ja, jag vill investera i mig själv!</Button>
+                        <Button>Ja, jag vill investera i mig själv!</Button>
                     </a>
-                </div>
-            </div>
+                </article>
+            </PaymentOptions>
         </Wrapper>
     );
 }
 
 const Wrapper = styled.section`
     padding-block-end: var(--spacing-xl);
+    background-color: var(--color-white-secondary);
 
     & > *:not(:first-child) {
         max-width: var(--max-width);
@@ -137,7 +137,9 @@ const List = styled.ul`
     max-width: 1000px;
     display: grid;
     grid-column-gap: 3rem;
+    grid-row-gap: var(--spacing-medium);
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: var(--spacing-xl);
 
     @media (max-width: 1000px) {
         grid-template-columns: 1fr;
@@ -146,7 +148,6 @@ const List = styled.ul`
 
     & li {
         position: relative;
-        margin-bottom: var(--spacing-medium);
 
         &::before {
             content: "🧡";
@@ -159,7 +160,6 @@ const List = styled.ul`
 `;
 
 const Table = styled.table`
-    /* border: 1px solid var(--color-secondary-dark); */
     border-spacing: 0;
     border-radius: 1rem;
     overflow: hidden;
@@ -167,7 +167,8 @@ const Table = styled.table`
     width: 100%;
     max-width: 600px;
     color: var(--color-secondary-darkest);
-    box-shadow: 0 0.5rem 1rem rgba(62, 45, 37, 0.1);
+    box-shadow: 0 0.25rem 0.5rem #6f371e26;
+    margin-block-end: var(--spacing-xl);
 
     & tr,
     td,
@@ -184,7 +185,6 @@ const Table = styled.table`
         color: var(--color-white);
         text-transform: uppercase;
         letter-spacing: 2px;
-        text-align: left;
         font-family: var(--font-secondary);
         background-color: var(--color-secondary-dark);
     }
@@ -200,6 +200,47 @@ const Table = styled.table`
             border-top: 1px solid var(--color-secondary-light);
             background-color: var(--color-secondary-light);
             font-weight: bold;
+        }
+    }
+`;
+
+const PaymentOptions = styled.section`
+    display: flex;
+    justify-content: space-around;
+
+    & article {
+        border-radius: 1rem;
+        color: var(--color-black);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #eef0ef94;
+        flex-basis: 40%;
+        box-shadow: 0 0.25rem 0.5rem #6f371e26;
+        padding-block-end: 3rem;
+
+        & > *:not(:first-child) {
+            padding: 0 2rem;
+        }
+
+        & > :first-child {
+            background-color: var(--color-primary-dark);
+            color: var(--color-white);
+            text-align: center;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            border-radius: 1rem 1rem 0 0;
+            margin-bottom: 1rem;
+        }
+
+        & h3 {
+            font-size: var(--font-md);
+        }
+
+        & .icon {
+            color: var(--color-primary);
+            opacity: 0.8;
+            font-size: 6rem;
         }
     }
 `;
