@@ -9,7 +9,7 @@ const Variables = createGlobalStyle`
         --color-secondary-darkest: hsla(15, 30%, 20%, 1.0);
         --color-secondary-dark: hsla(15, 50%, 45%, 1.0);
         --color-secondary: hsla(18, 60%, 55%, 1.0);
-        --color-secondary-light: hsla(18, 50%, 60%, .3);
+        --color-secondary-light: hsla(18, 50%, 60%, .1);
 
         --color-white: hsla(164, 15%, 96%, 1.0);
         --color-white-secondary: hsla(18, 15%, 96%, 1.0);
