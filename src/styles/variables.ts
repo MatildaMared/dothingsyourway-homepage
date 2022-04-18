@@ -23,14 +23,20 @@ const Variables = createGlobalStyle`
         --font-xxl: clamp(3.14rem, 6.71vw + 0.46rem, 5.5rem);
 
         // Fonts
-        --font-primary: apparat-light, sans-serif;
+        --font-primary: apparat, sans-serif;
+        --font-primary-thin: "apparat-thin", sans-serif;
         --font-secondary: futura-pt-condensed, sans-serif;
 
         // Spacing
         --spacing-small: 1rem;
-        --spacing-medium: 2rem;
+        --spacing-medium: 4rem;
         --spacing-large: 6rem;
         --spacing-xl: 12rem;
+        
+        @media (max-width: 700px) {
+            --spacing-large: 3rem;
+            --spacing-xl: 6rem;
+        }
     }
 `;
 
