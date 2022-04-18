@@ -52,14 +52,24 @@ const Wrapper = styled.section`
 	width: 100%;
 	margin: 0 auto;
 	background-color: var(--color-primary-dark);
-	margin: var(--spacing-xl) 0;
-	padding: var(--spacing-large) 0;
+	padding: var(--spacing-xl) 0;
 `;
 
 const Heading = styled.h2`
 	color: var(--color-white);
 	text-align: center;
-	margin-bottom: 4rem;
+	margin-bottom: var(--spacing-large);
+	font-size: var(--font-xl);
+	line-height: 1.8;
+
+	&::before, &::after {
+		content: "";
+		margin-inline: auto;
+		display: block;
+		width: 4rem;
+		height: 1px;
+		background-color: rgba(255, 255, 255, .3);
+	}
 `;
 
 const Content = styled.div`

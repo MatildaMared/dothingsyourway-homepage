@@ -35,7 +35,7 @@ const Wrapper = styled.h1<StyledProps>`
     &::before {
         content: "";
         display: block;
-        width: 50px;
+        width: 4rem;
         height: 1px;
         background-color: rgba(255, 255, 255, 0.4);
     }

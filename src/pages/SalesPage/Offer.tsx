@@ -5,7 +5,7 @@ import SectionHeader from "../../components/SectionHeader";
 
 function Offer() {
     return (
-        <Wrapper>
+        <Wrapper id="offer">
             <SectionHeader text="Ditt erbjudande" secondary={true} />
             <section>
                 <h2>Detta får du!</h2>
@@ -83,7 +83,7 @@ function Offer() {
                     <div className="icon">
                         <i className="bx bx-credit-card"></i>
                     </div>
-                    <p>Engångsbetalning 6000 kr</p>
+                    <p>Engångsbetalning 20 000:-</p>
                     <a
                         href="https://dothingsyourway.thrivecart.com/stressfrihet-intro/"
                         target="_blank"
@@ -97,7 +97,7 @@ function Offer() {
                     <div className="icon">
                         <i className="bx bx-credit-card"></i>
                     </div>
-                    <p>3 delbetalningar á 2200 kr (totalt 6600 kr)</p>
+                    <p>Sex delbetalningar á 3650 kr (totalt 21 900:-)</p>
                     <a
                         href="https://dothingsyourway.thrivecart.com/stressfrihet-intro/"
                         target="_blank"
@@ -208,6 +208,10 @@ const PaymentOptions = styled.section`
     display: flex;
     justify-content: space-around;
 
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+
     & article {
         border-radius: 1rem;
         color: var(--color-black);
@@ -218,6 +222,18 @@ const PaymentOptions = styled.section`
         flex-basis: 40%;
         box-shadow: 0 0.25rem 0.5rem #6f371e26;
         padding-block-end: 3rem;
+
+        @media (max-width: 800px) {
+            flex-basis: 100%;
+            width: 100%;
+            flex-direction: column;
+            max-width: 550px;
+            margin-inline: auto;
+
+            &:not(:last-child) {
+                margin-block-end: 4rem;
+            }
+        }
 
         & > *:not(:first-child) {
             padding: 0 2rem;
