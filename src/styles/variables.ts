@@ -5,8 +5,11 @@ const Variables = createGlobalStyle`
         // Colors
         --color-primary-dark: hsla(189, 18%, 31%, 1.0);
         --color-primary: hsla(164, 12%, 54%, 1.0);
-        --color-secondary-dark: hsla(15, 60%, 50%, 1.0);
-        --color-secondary: hsla(18, 85%, 60%, 1.0);
+        --color-primary-light: hsla(164, 12%, 54%, 0.3);
+        --color-secondary-darkest: hsla(15, 30%, 20%, 1.0);
+        --color-secondary-dark: hsla(15, 50%, 45%, 1.0);
+        --color-secondary: hsla(18, 60%, 55%, 1.0);
+        --color-secondary-light: hsla(18, 50%, 60%, .3);
 
         --color-white: hsla(164, 12%, 90%, 1.0);
         --color-black: hsla(189, 10%, 15%, 1.0);
@@ -28,12 +31,14 @@ const Variables = createGlobalStyle`
         --font-secondary: futura-pt-condensed, sans-serif;
 
         // Spacing
-        --spacing-small: 1rem;
+        --spacing-small: 2rem;
         --spacing-medium: 4rem;
         --spacing-large: 6rem;
         --spacing-xl: 12rem;
         
         @media (max-width: 700px) {
+            --spacing-small: 1rem;
+            --spacing-medium: 2rem;
             --spacing-large: 3rem;
             --spacing-xl: 6rem;
         }
