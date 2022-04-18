@@ -24,7 +24,7 @@ const Wrapper = styled.h1<StyledProps>`
         props.secondary
             ? "var(--color-secondary-darkest)"
             : "var(--color-primary-dark)"};
-    margin-block-end: var(--spacing-xl);
+    margin-block-end: var(--spacing-large);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -7,13 +7,14 @@ function Contents() {
     return (
         <Wrapper>
             <SectionHeader text="Kursens innehåll" secondary />
+            <h2>I kursen kommer du bland annat att lära dig mer om...</h2>
             <CourseContents>
                 <List>
                     <li>
+                        <h3>Tid</h3>
                         <div className="icon">
                             <i className="bx bxs-time-five"></i>
                         </div>
-                        <h3>1. Tid</h3>
                         <p>
                             Först och främst måste vi frigöra tid för att du ska
                             kunna jobba på dig själv. Därför börjar vi med att
@@ -26,10 +27,10 @@ function Contents() {
                         </p>
                     </li>
                     <li>
+                        <h3>Stress</h3>
                         <div className="icon">
                             <i className="bx bx-run"></i>
                         </div>
-                        <h3>2. Stress</h3>
                         <p>
                             Den senaste forskningen visar faktiskt att stress
                             inte är farligt – så länge vi inte tror att det är
@@ -41,10 +42,10 @@ function Contents() {
                         </p>
                     </li>
                     <li>
+                        <h3>Självkänsla</h3>
                         <div className="icon">
                             <i className="bx bx-heart-circle"></i>
                         </div>
-                        <h3>3. Självkänsla</h3>
                         <p>
                             Självkärlek är antagligen den viktigaste komponenten
                             i ett hållbart, produktivt och lyckligt liv. Du kan
@@ -60,10 +61,10 @@ function Contents() {
                 </List>
                 <List>
                     <li>
+                        <h3>Energi</h3>
                         <div className="icon">
                             <i className="bx bxs-battery-charging"></i>
                         </div>
-                        <h3>4. Energi</h3>
                         <p>
                             I denna del får du lära dig de bästa verktygen för
                             att hålla en hög energinivå hela dagen. Förutom att
@@ -75,10 +76,10 @@ function Contents() {
                         </p>
                     </li>
                     <li>
+                        <h3>Fokus</h3>
                         <div className="icon">
                             <i className="bx bx-bulb"></i>
                         </div>
-                        <h3>5. Fokus</h3>
                         <p>
                             Del fem handlar om hur du tar vara på din tid och är
                             så effektiv och produktiv som möjligt. Du lär dig
@@ -91,10 +92,10 @@ function Contents() {
                         </p>
                     </li>
                     <li>
+                        <h3>Riktning</h3>
                         <div className="icon">
                             <i className="bx bx-compass"></i>
                         </div>
-                        <h3>6. Riktning</h3>
                         <p>
                             Du skapar fullständig klarhet i varje ögonblick i
                             ditt liv med hjälp av två saker – fokus och
@@ -119,6 +120,15 @@ const Wrapper = styled.section`
     background-color: var(--color-white-secondary);
     color: var(--color-secondary-darkest);
 
+    & > h2 {
+        text-align: center;
+        margin-block-end: var(--spacing-large);
+
+        @media (max-width: 800px) {
+            margin: 0;
+        }
+    }
+
     & > *:not(:first-child) {
         padding: 0 1rem;
         margin-inline: auto;
@@ -140,6 +150,14 @@ const CourseContents = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 600px;
+        margin-inline: auto;
+        grid-gap: 0;
+    }
 `;
 
 const List = styled.ul`
@@ -151,6 +169,36 @@ const List = styled.ul`
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1rem var(--color-shadow);
+
+    @media (max-width: 800px) {
+        width: 100%;
+        max-width: 600px;
+        margin-inline: auto;
+        background-color: var(--color-white-secondary);
+    }
+
+    & li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:not(:last-child) {
+            &::after {
+                content: "";
+                display: block;
+                width: 40%;
+                height: 2px;
+                margin: 1rem 0;
+                background-color: var(--color-secondary);
+            }
+        }
+
+        & .icon {
+            font-size: 3rem;
+            color: var(--color-secondary);
+        }
+    }
 `;
 
 export default Contents;

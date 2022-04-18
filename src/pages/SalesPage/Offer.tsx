@@ -97,7 +97,10 @@ function Offer() {
                     <div className="icon">
                         <i className="bx bx-credit-card"></i>
                     </div>
-                    <p>Sex delbetalningar á 3650 kr (totalt 21 900:-)</p>
+                    <p>
+                        Sex delbetalningar á 3650 kr <br />
+                        Totalt 21 900:-
+                    </p>
                     <a
                         href="https://dothingsyourway.thrivecart.com/stressfrihet-intro/"
                         target="_blank"
@@ -222,6 +225,11 @@ const PaymentOptions = styled.section`
         flex-basis: 40%;
         box-shadow: 0 0.25rem 0.5rem #6f371e26;
         padding-block-end: 3rem;
+        justify-content: space-between;
+
+        & p {
+            text-align: center;
+        }
 
         @media (max-width: 800px) {
             flex-basis: 100%;
