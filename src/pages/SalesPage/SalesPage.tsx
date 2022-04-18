@@ -1,14 +1,18 @@
 import React from "react";
+import SmallHeader from "../../components/SmallHeader";
 import About from "./About";
 import Offer from "./Offer";
 
 const SalesPage = () => {
     return (
-        <main>
-            <h1>Sales page</h1>
-            <Offer />
-            <About />
-        </main>
+        <>
+            <SmallHeader />
+            <main>
+                <h1>Sales page</h1>
+                <Offer />
+                <About />
+            </main>
+        </>
     );
 };
 
