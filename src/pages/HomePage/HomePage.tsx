@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from "../components/Logo";
-import Header from "../components/Header";
-import Container from "../components/Layout/Container";
-import Testimonials from "../components/Testimonials";
+import Logo from "../../components/Logo";
+import Header from "../../components/Header";
+import Container from "../../components/Layout/Container";
+import Testimonials from "../../components/Testimonials";
 
 const HomePage = () => {
     return (
