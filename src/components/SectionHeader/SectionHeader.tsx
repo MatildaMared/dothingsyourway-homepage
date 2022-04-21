@@ -17,13 +17,13 @@ interface StyledProps {
 }
 
 const Wrapper = styled.h1<StyledProps>`
+    position: relative;
+    background-blend-mode: soft-light;
     font-size: var(--font-xl);
     line-height: 1.8;
     padding-block: var(--spacing-large);
     background-color: ${(props) =>
-        props.secondary
-            ? "var(--color-secondary-darkest)"
-            : "var(--color-primary-dark)"};
+        props.secondary ? "hsla(15, 30%, 20%, 1)" : "hsla(189, 18%, 31%, 1)"};
     margin-block-end: var(--spacing-large);
     display: flex;
     justify-content: center;
