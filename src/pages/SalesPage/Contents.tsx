@@ -2,12 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
 import SectionHeader from "../../components/SectionHeader";
+import freedomPhoto from "../../assets/images/freedom.jpg";
 
 function Contents() {
     return (
         <Wrapper>
             <SectionHeader text="Kursens innehåll" secondary />
             <h2>I kursen kommer du bland annat att lära dig mer om...</h2>
+            <figure>
+                <img className="photo" src={freedomPhoto} alt="Freedom" />
+            </figure>
             <CourseContents>
                 <List>
                     <li>
@@ -119,6 +123,19 @@ const Wrapper = styled.section`
     margin-bottom: var(--spacing-xl);
     background-color: var(--color-white-secondary);
     color: var(--color-secondary-darkest);
+
+    & > figure {
+        width: 100%;
+        height: auto;
+        max-width: 650px;
+        margin-inline: auto;
+        margin-block-end: var(--spacing-large);
+
+        & img {
+            margin-inline: auto;
+            border-radius: 1rem;
+        }
+    }
 
     & > h2 {
         text-align: center;
