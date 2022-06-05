@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import backgroundPrimary from "../../assets/images/background-primary.svg";
 
 interface Props {
     text: string;
@@ -7,13 +8,18 @@ interface Props {
 }
 
 const SectionHeader = ({ text, secondary }: Props) => {
-    return <Wrapper secondary={secondary}>{text}</Wrapper>;
+    return (
+        <Wrapper secondary={secondary} background={backgroundPrimary}>
+            {text}
+        </Wrapper>
+    );
 };
 
 export default SectionHeader;
 
 interface StyledProps {
     secondary?: boolean;
+    background: string;
 }
 
 const Wrapper = styled.h1<StyledProps>`
@@ -30,6 +36,7 @@ const Wrapper = styled.h1<StyledProps>`
     align-items: center;
     flex-direction: column;
     color: #fff;
+    background: url(${(props) => props.background});
 
     &::after,
     &::before {
